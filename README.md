@@ -1,2 +1,2 @@
 # pokertimer-api
-Time board to poker games
+API to serve a time board for poker games
