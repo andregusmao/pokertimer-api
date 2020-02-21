@@ -35,6 +35,8 @@ routes.get('/tournaments/:id', UserController.verify, TournamentController.show)
 routes.post('/tournaments', UserController.verifyAdmin, TournamentController.store);
 routes.put('/tournaments/:id', UserController.verifyAdmin, TournamentController.update);
 routes.delete('/tournaments/:id', UserController.verifyAdmin, TournamentController.destroy);
+routes.put('/tournaments/:id/changestatus', UserController.verify, TournamentController.changeStatus);
+routes.put('/tournaments/:id/changetime', UserController.verify, TournamentController.changeTime);
 
 // Users
 routes.get('/users', UserController.verify, UserController.index);

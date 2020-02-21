@@ -46,16 +46,16 @@ const TournamentSchema = new mongoose.Schema({
         type: Date,
         required: false
     },
-    currentTime: {
-        type: Date,
-        required: false
-    },
     currentLevel: {
         type: Number,
         required: false
     },
+    currentTime: {
+        type: Number,
+        required: false
+    },
     status: {
-        type: Number, // 0 = created, 1 = started, 2 = finished, 3 = canceled
+        type: Number, // 0 = created, 1 = started, 2 = paused, 3 = finished, 4 = canceled
         required: true
     }
 });
