@@ -143,6 +143,18 @@ module.exports = {
                                 error: 'Torneio ainda não iniciado'
                             });
                             break;
+                        case 3:
+                            return res.status(400).json({
+                                error: 'Torneio já encerrado'
+                            });
+                            break;
+                        case 4:
+                            return res.status(400).json({
+                                error: 'Torneio cancelado'
+                            });
+                            break;
+                        default:
+                            tournament.finishTime = new Date();
                     }
                     break;
             }
